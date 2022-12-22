@@ -40,6 +40,15 @@ namespace practice4
                 {
                     TableCell c = new TableCell();
                     c.Controls.Add(new LiteralControl(Displayobject.l1[j]));
+                    if (Displayobject.l1[j] == "fizz") {
+                        c.ForeColor = System.Drawing.Color.Blue;
+                    }
+                    else if(Displayobject.l1[j] == "buzz")
+                    {
+                        c.ForeColor = System.Drawing.Color.Green;
+                    }
+                    else
+                        c.ForeColor = System.Drawing.Color.Black;
                     r.Cells.Add(c);
                 }
                 Table1.Rows.Add(r);
