@@ -31,13 +31,19 @@ namespace practice4
             else {
                 Displayobject.show(n,"fizz", "buzz");
             }
-            foreach(string i in Displayobject.l1){
-
-                Label3.Text = Label3.Text + Environment.NewLine + i;
-
+            int numrows = Displayobject.l1.Count;
+            int numcells = 1;
+            for (int j = 0; j < numrows; j++)
+            {
+                TableRow r = new TableRow();
+                for (int i = 0; i < numcells; i++)
+                {
+                    TableCell c = new TableCell();
+                    c.Controls.Add(new LiteralControl(Displayobject.l1[j]));
+                    r.Cells.Add(c);
+                }
+                Table1.Rows.Add(r);
             }
-
-            
         }
     }
 }
