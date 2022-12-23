@@ -29,6 +29,8 @@
                 <asp:TableRow runat="server">
                 </asp:TableRow>
             </asp:Table>
+            <asp:Button ID="Button3" runat="server" Text="Next" Visible="False" />
+            <asp:Button ID="Button2" runat="server" Text="Prev" Visible="False" />
             <br />
             
             </div>

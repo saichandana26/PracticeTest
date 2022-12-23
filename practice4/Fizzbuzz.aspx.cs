@@ -31,28 +31,42 @@ namespace practice4
             else {
                 Displayobject.show(n,"fizz", "buzz");
             }
-            int numrows = Displayobject.l1.Count;
-            int numcells = 1;
-            for (int j = 0; j < numrows; j++)
-            {
-                TableRow r = new TableRow();
-                for (int i = 0; i < numcells; i++)
+           
+            
+                int numrows = Displayobject.l1.Count;
+                int numcells = 1;
+                for (int j = 0; j < numrows; j++)
                 {
-                    TableCell c = new TableCell();
-                    c.Controls.Add(new LiteralControl(Displayobject.l1[j]));
-                    if (Displayobject.l1[j] == "fizz") {
-                        c.ForeColor = System.Drawing.Color.Blue;
-                    }
-                    else if(Displayobject.l1[j] == "buzz")
+                    TableRow r = new TableRow();
+                    for (int i = 0; i < numcells; i++)
                     {
-                        c.ForeColor = System.Drawing.Color.Green;
+                        TableCell c = new TableCell();
+                        c.Controls.Add(new LiteralControl(Displayobject.l1[j]));
+                        if (Displayobject.l1[j] == "fizz")
+                        {
+                            c.ForeColor = System.Drawing.Color.Blue;
+                        }
+                        else if (Displayobject.l1[j] == "buzz")
+                        {
+                            c.ForeColor = System.Drawing.Color.Green;
+                        }
+                        else if (Displayobject.l1[j] == "wizz")
+                        {
+                            c.ForeColor = System.Drawing.Color.Blue;
+                        }
+                        else if (Displayobject.l1[j] == "wuzz")
+                        {
+                            c.ForeColor = System.Drawing.Color.Green;
+                        }
+                        else
+                            c.ForeColor = System.Drawing.Color.Black;
+                        r.Cells.Add(c);
                     }
-                    else
-                        c.ForeColor = System.Drawing.Color.Black;
-                    r.Cells.Add(c);
+                    Table1.Rows.Add(r);
                 }
-                Table1.Rows.Add(r);
-            }
+            
+        
         }
+        
     }
 }

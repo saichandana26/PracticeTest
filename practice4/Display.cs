@@ -11,7 +11,7 @@ namespace practice4
         public List<string> l1=new List<string>();
         public List<string> show(int n,string a,string b) {
 
-            for (int i = 2; i < n; i++)
+            for (int i = 1; i < n; i++)
             {
                 if (i % 3 == 0 & i % 5 == 0) { l1.Add(a + b); continue; }
                 if (i % 3 == 0) { l1.Add(a); continue; }
